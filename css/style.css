@@ -54,6 +54,18 @@
     border-radius: 50px;
     transition: background-color 0.3s ease;
   }
+  .section {
+    padding-inline: 2rem;
+    padding-block: 4rem;
+  }
+  .section[data-padding="large"] {
+    padding-block: 6rem;
+  }
+  .section__title {
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
 }
 
 @layer components {
@@ -215,6 +227,31 @@
   @media (width <= 62rem) {
     .hero__title {
       font-size: 2.3rem;
+    }
+  }
+}
+@layer testimonials {
+  .testimonials__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: 2rem;
+  }
+  .testimonials__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+
+    .testimonials__image {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .testimonials__card-text {
+      font-style: italic;
+      margin-bottom: 1.5rem;
     }
   }
 }
