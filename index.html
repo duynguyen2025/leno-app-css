@@ -17,12 +17,56 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>Leno App</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
     <script src="./js/main.js" defer></script>
   </head>
   <body>
-    <h1>Hello</h1>
+    <header class="main-header">
+      <div class="main-header__container container">
+        <a href="" class="main-header__logo">
+          <img src="./images/logo.svg" alt="logo" width="112" height="36" />
+        </a>
+        <nav class="desktop-nav">
+          <ul class="desktop-nav__list">
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link">Home</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#features" class="desktop-nav__link">Features</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#preview" class="desktop-nav__link">Preview</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#details" class="desktop-nav__link">Details</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#download" class="desktop-nav__link">Download</a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link--primary">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li class="desktop-nav__item">
+              <a href="#" class="desktop-nav__link--primary">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </body>
 </html>
