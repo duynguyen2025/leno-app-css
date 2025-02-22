@@ -92,6 +92,10 @@
       align-items: center;
     }
   }
+  .main-header--scrolled {
+    background-color: rgba(38, 36, 49, 0.8);
+    backdrop-filter: blur(10px);
+  }
   .desktop-nav__list {
     display: flex;
     align-items: center;
