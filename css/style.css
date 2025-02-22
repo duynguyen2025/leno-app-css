@@ -57,6 +57,7 @@
   .section {
     padding-inline: 2rem;
     padding-block: 4rem;
+    text-align: center;
   }
   .section[data-padding="large"] {
     padding-block: 6rem;
@@ -65,6 +66,13 @@
     font-size: 2.3rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
+  }
+  .section__description {
+    max-width: 600px;
+    margin: 1rem auto 4rem;
+  }
+  .bg-tertiary {
+    background-color: var(--tertiary-color);
   }
 }
 
@@ -252,6 +260,71 @@
     .testimonials__card-text {
       font-style: italic;
       margin-bottom: 1.5rem;
+    }
+  }
+}
+@layer features {
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    grid-template-areas: "left center right";
+    .features__grid-column:nth-child(1) {
+      grid-area: left;
+    }
+    .features__grid-column:nth-child(2) {
+      grid-area: center;
+    }
+    .features__grid-column:nth-child(3) {
+      grid-area: right;
+      .features__grid-item {
+        flex-direction: row-reverse;
+        text-align: left;
+      }
+    }
+  }
+  .features__grid-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+  }
+  .features__grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: right;
+    gap: 1.5rem;
+
+    .features__grid-item-text-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+  }
+  .features__grid-item-icon i {
+    color: var(--primary-color);
+  }
+
+  @media (width <= 62rem) {
+    .features__grid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "center"
+        "left"
+        "right";
+
+      .features__grid-item {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .features__grid-column:nth-child(3) {
+        .features__grid-item {
+          flex-direction: column-reverse;
+          text-align: center;
+        }
+      }
     }
   }
 }
